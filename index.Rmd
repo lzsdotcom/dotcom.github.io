@@ -11,3 +11,5 @@ output:
 Welcome to my website!
 
 ![](https://i.giphy.com/media/DUO76cKAFAObu/giphy.webp)
+
+I am in the MS in Biostatistics program at Columbia University, studying Public Health Data Science!

@@ -6,7 +6,9 @@ navbar:
     - text: "About"
       href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<lzs2109@cumc.columbia.edu>
+    - icon: fa-linkedin fa-lg
+      href: http://www.linkedin.com/in/louis-sharp-55b8b279
     - icon: fa-github fa-lg
       href: http://github.com/lzsdotcom/
 output:
