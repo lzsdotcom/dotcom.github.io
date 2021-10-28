@@ -1,0 +1,25 @@
+---
+title: "plotly"
+author: "Louis Sharp"
+date: "10/28/2021"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+```
+
+```{r}
+rest_inspec %>% 
+  filter(dba == "DUNKIN DONUTS") %>% 
+  count(violation_description) %>% 
+  filter(n > 1) %>% 
+  arrange(desc(n))
+```
+
