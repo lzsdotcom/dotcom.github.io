@@ -1,0 +1,14 @@
+---
+title: "A website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## About me
+
+Here are some details about my previous academic and professional experiences
+
+<img src="images/LZS_CV copy.jpg" style="width:75%">
+<img src="images/LZS_CV copy2.jpg" style="width:75%">
