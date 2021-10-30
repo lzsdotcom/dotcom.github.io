@@ -13,7 +13,32 @@ library(plotly)
 
 ```{r}
 data("rest_inspec")
-data("instacart")
+
+rest_inspec = 
+  rest_inspec %>% 
+  drop_na(grade_date) %>% 
+  mutate(boro = str_to_title(boro)) %>% 
+  filter(boro == "Bronx",
+         grade %in% c("A", "B", "C"),
+         critical_flag == "Critical") %>% 
+  separate(grade_date, into = c("year", "month", "day"), sep = "\\-")
+
+rest_inspec %>% 
+  group_by(year, month) %>%
+  summarize(n = n()) %>% 
+  plot_ly(x = ~year, y = ~n, color = ~month, type = "scatter", mode = "line", colors = "viridis")
+
+rest_inspec %>% 
+  group_by(year, month) %>%
+  summarize(n = n()) %>% 
+  plot_ly(y = ~n, color = ~month, type = "box", colors = "viridis")
+
+rest_inspec %>% 
+  group_by(cuisine_description) %>%
+  summarize(n = n()) %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>% 
+  plot_ly(x = ~cuisine_description, y = ~n, 
+          color = ~cuisine_description, type = "bar", colors = "viridis")
 ```
 
 ```{r}
