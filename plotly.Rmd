@@ -13,13 +13,32 @@ library(plotly)
 
 ```{r}
 data("rest_inspec")
+data("instacart")
 ```
 
 ```{r}
-rest_inspec %>% 
-  filter(dba == "DUNKIN DONUTS") %>% 
-  count(violation_description) %>% 
-  filter(n > 1) %>% 
-  arrange(desc(n))
+nynoaa = read_csv("data/nynoaadat.csv") %>% 
+  mutate(date = as.character(date),
+         tmax = tmax / 10,
+         tmin = tmin / 10) %>% 
+  filter(id == "USW00094728",
+         grepl("20[0-20]", date))
+
+nynoaa %>%
+  plot_ly(x = ~date, y = ~tmax, color = ~tmin, type = "scatter", mode = "markers")
+
+nynoaa %>% 
+  mutate(date = gsub("\\-.*","",date)) %>% 
+  group_by(tmax) %>% 
+  summarize(n = n(), date) %>% 
+  arrange(desc(tmax)) %>% 
+  plot_ly(x = ~tmax, y = ~n, color = ~date, type = "bar", colors = "viridis")
+
+nynoaa %>% 
+  mutate(date = gsub("\\-.*","",date)) %>% 
+  group_by(tmax) %>% 
+  summarize(n = n(), date) %>% 
+  arrange(desc(tmax)) %>% 
+  plot_ly(x = ~date, y = ~tmax, color = ~n, type = "box", colors = "viridis")
 ```
 
