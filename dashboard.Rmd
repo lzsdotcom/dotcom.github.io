@@ -1,0 +1,64 @@
+---
+title: "Critical Violations at Bronx Restaurants"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec %>% 
+  drop_na(grade_date) %>% 
+  mutate(boro = str_to_title(boro)) %>% 
+  filter(boro == "Bronx",
+#         grade %in% c("A", "B", "C"),
+         critical_flag == "Critical") %>% 
+  separate(grade_date, into = c("year", "month", "day"), sep = "\\-")
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+rest_inspec %>% 
+  group_by(cuisine_description) %>%
+  summarize(n = n()) %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>% 
+  plot_ly(x = ~cuisine_description, y = ~n, 
+          color = ~cuisine_description, type = "bar", colors = "viridis")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+rest_inspec %>% 
+  group_by(year, month) %>%
+  summarize(n = n()) %>% 
+  plot_ly(y = ~n, color = ~month, type = "box", colors = "viridis")
+```
+
+### Chart C
+
+```{r}
+rest_inspec %>% 
+  group_by(year, month) %>%
+  summarize(n = n()) %>% 
+  plot_ly(x = ~year, y = ~n, color = ~month, type = "scatter", mode = "line", colors = "viridis")
+```
+

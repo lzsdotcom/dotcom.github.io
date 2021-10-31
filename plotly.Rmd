@@ -32,7 +32,9 @@ rest_inspec %>%
   group_by(year, month) %>%
   summarize(n = n()) %>% 
   plot_ly(y = ~n, color = ~month, type = "box", colors = "viridis")
+```
 
+```{r, fig.width = 10}
 rest_inspec %>% 
   group_by(cuisine_description) %>%
   summarize(n = n()) %>% 
