@@ -36,9 +36,11 @@ Column {data-width=650}
 rest_inspec %>% 
   group_by(cuisine_description) %>%
   summarize(n = n()) %>% 
-  mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n),
+         text_label = str_c("Critical Violations: ", n)) %>% 
   plot_ly(x = ~cuisine_description, y = ~n, 
-          color = ~cuisine_description, type = "bar", colors = "viridis")
+          color = ~cuisine_description, type = "bar", colors = "viridis",
+          text = ~text_label)
 ```
 
 Column {data-width=350}
@@ -59,6 +61,8 @@ rest_inspec %>%
 rest_inspec %>% 
   group_by(year, month) %>%
   summarize(n = n()) %>% 
-  plot_ly(x = ~year, y = ~n, color = ~month, type = "scatter", mode = "line", colors = "viridis")
+  mutate(text_label = str_c("Critical Violations: ", n, "\nYear: ", year, "\nMonth: ", month)) %>%
+  plot_ly(x = ~year, y = ~n, color = ~month, 
+          type = "scatter", mode = "line", colors = "viridis", text = ~text_label)
 ```
 
