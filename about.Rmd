@@ -10,5 +10,5 @@ output:
 
 Here are some details about my previous academic and professional experiences
 
-<img src="images/LZS_CV copy.jpg" style="width:85%">
-<img src="images/LZS_CV copy2.jpg" style="width:85%">
+
+![Resume](./images/LZS_CV copy 2.pdf){width=100% height=800}
