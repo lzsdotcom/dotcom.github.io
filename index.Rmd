@@ -6,10 +6,10 @@ output:
     toc_float: true
 ---
 
-## This is Louis' website
+## Welcome!
 
 Welcome to my website!
 
 ![](https://i.giphy.com/media/DUO76cKAFAObu/giphy.webp)
 
-I am in the MS in Biostatistics program at Columbia University, studying Public Health Data Science!
+Hi! My name is Louis Sharp, I'm from Oakland, CA and I am in the MS in Biostatistics program at Columbia University in New York, studying Public Health Data Science! I did my Bachelor's studies at University of California, Berkeley in Molecular and Cell Biology. Some of my interests include science (biological and otherwise), kitties, motorcycles, and cooking.

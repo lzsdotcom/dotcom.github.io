@@ -30,7 +30,7 @@ rest_inspec =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Number of Critical Violations at Bronx Restaurants by Cuisine Type
 
 ```{r}
 rest_inspec %>% 
@@ -44,7 +44,7 @@ rest_inspec %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Distribution of Critical Violations at Bronx Restaurants by Month (2013-2017)
 
 ```{r}
 rest_inspec %>% 
@@ -53,7 +53,7 @@ rest_inspec %>%
   plot_ly(y = ~n, color = ~month, type = "box", colors = "viridis")
 ```
 
-### Chart C
+### Number of Critical Violations at Bronx Restaurants Over Time
 
 ```{r}
 rest_inspec %>% 
