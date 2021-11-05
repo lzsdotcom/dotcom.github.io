@@ -11,6 +11,8 @@ library(p8105.datasets)
 library(plotly)
 ```
 
+## Bronx Restaurants
+
 ```{r}
 data("rest_inspec")
 
@@ -46,6 +48,8 @@ rest_inspec %>%
           color = ~cuisine_description, type = "bar", colors = "viridis",
           text = ~text_label)
 ```
+
+## Is It Hot In Here, or Just Me ?
 
 ```{r}
 nynoaa = read_csv("data/nynoaadat.csv") %>% 

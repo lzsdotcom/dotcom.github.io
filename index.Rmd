@@ -14,9 +14,13 @@ Welcome to my website!
 
 Hi! My name is Louis Sharp, I'm from Oakland, CA and I am in the MS in Biostatistics program at Columbia University in New York, studying Public Health Data Science! I did my Bachelor's studies at University of California, Berkeley in Molecular and Cell Biology. Some of my interests include science (biological and otherwise), kitties, motorcycles, old cars, and cooking. Here's some pictures!
 
+## Cats!
+
 ![](./images/shadow.jpg)
 
 This is Shadow! He's my sister's cat, and he's a bit of a strange guy, but he's my buddy and he's been keeping me going during my first semester in grad school.
+
+## Vrooms
 
 ![](./images/sv.jpg){width=33%}![](./images/gsxr.jpg){width=33%}![](./images/bikes.jpg){width=33%}
 
@@ -25,5 +29,8 @@ These are some of motorcycles I owned and loved riding back in California, befor
 ![](./images/cougar.jpg){width=75%}
 
 Here's an old car I used to own and work on alot, it's a 1967 Mercury Cougar. I sold it to my buddy when I got into motorcycles about 5 years ago.. I still regret it! He's taking good care of it though. $\\$
+
+## Fun fact and Other Stuff
+
 Fun fact about my house in those motorcycle/car pictures, it appeared in the movie Blindspotting! If you've seen the movie, see if you can spot the house by the paint/trim color (I know it's a challenge, as there's not much to work with). $\\$
 For my science and research interests, please see my about page! Thanks for visiting.
