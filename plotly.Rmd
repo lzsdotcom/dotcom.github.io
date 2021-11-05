@@ -50,7 +50,7 @@ rest_inspec %>%
           text = ~text_label)
 ```
 
-## Is It Hot In Here, or Just Me ?
+## Is it Hot in Here, or Just Me ?
 
 ```{r}
 nynoaa = read_csv("data/nynoaadat.csv") %>% 
