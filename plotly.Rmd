@@ -1,8 +1,9 @@
 ---
 title: "Plotly"
-author: "Louis Sharp"
-date: "10/28/2021"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ```{r}
